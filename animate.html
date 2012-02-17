@@ -26,9 +26,11 @@ img2 = '<img id="' + new_sketch2 + '" src="' + the_path + new_sketch2  + '.png" 
 $('body').append(img1).append(img2);
 the_id1 = "#"+new_sketch1;
 the_id2 = "#"+new_sketch2;
+for (i=0;i<=5;i++) {
+	moveIt(the_id1);
+	setTimeout(function(){moveIt(the_id2)}, 1000);
+}
 
-moveIt(the_id1);
-setTimeout(function(){moveIt(the_id2)}, 1000);
 
 function moveIt(the_div){
 	$(the_div).animate({
