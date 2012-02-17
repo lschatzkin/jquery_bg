@@ -6,14 +6,15 @@
 </head>
 
 <body>
-<img id="eyeglass" src="../wp-creativix/images/eyeglass.png" alt="" width="346" height="251"/>
-<img id="can-opener" src="../wp-creativix/images/can-opener.png" alt="" width="151" height="258" />
+<img id="eyeglass" src="images/eyeglass.png" alt="" width="346" height="251"/>
+<img id="can-opener" src="images/can-opener.png" alt="" width="151" height="258" />
+<div id="add_stuff">hi</div>
 </body>
 <script type="text/javascript" src="js/jquery.js"></script>
 
 <script>
 $(function(){
-var the_path = 'wp-creativix/images/';
+var the_path = 'images/';
 var randomNum = (Math.ceil(Math.random()*6))-1; /* Pick random number between 0 and 5 */
 alert(randomNum);
 var sketches = ['eyeglass', 'can-opener','faucet', 'necklace-clasp', 'music-box', 'hanger-clip'];
@@ -21,6 +22,7 @@ new_sketch = sketches[randomNum];
 alert(new_sketch);
 the_img = '<img id="' + new_sketch + '" src="' + the_path + new_sketch  + '.png" />';
 alert(the_img);
+$('#add_stuff').append(the_img);
 the_id = "#"+new_sketch;
 alert(the_id);
 moveIt(the_id);
