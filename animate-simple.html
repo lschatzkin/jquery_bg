@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>jQuery rotating background </title>
+<title>jQuery rotating background - simple</title>
 </head>
 
 <body>
@@ -13,17 +13,7 @@
 
 <script>
 $(function(){
-var the_path = 'wp-creativix/images/';
-var randomNum = (Math.ceil(Math.random()*6))-1; /* Pick random number between 0 and 5 */
-alert(randomNum);
-var sketches = ['eyeglass', 'can-opener','faucet', 'necklace-clasp', 'music-box', 'hanger-clip'];
-new_sketch = sketches[randomNum];
-alert(new_sketch);
-the_img = '<img id="' + new_sketch + '" src="' + the_path + new_sketch  + '.png" />';
-alert(the_img);
-the_id = "#"+new_sketch;
-alert(the_id);
-moveIt(the_id);
+moveIt('#eyeglass');
 setTimeout(function(){moveIt('#can-opener')}, 1000);
 
 function moveIt(the_div){
