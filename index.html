@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<title>Schatzkin: Web Design & Development & Artsy Stuff</title>
+	<link href="grid.css" type="text/css" rel="stylesheet" media="screen"/>
+
+</head>
+<body>
+
+<div class="row">
+	<div class="column grid_12 height_200"></div>
+</div>
+
+
+<div class="row">
+	<div class="column grid_4"><p>&nbsp;</p></div>
+	<div class="column grid_4 logo"><h1>&nbsp;</h1></div>
+	<div class="column grid_4"><p>&nbsp;</p></div>
+</div>
+<div class="row">
+	<div class="column grid_1"><p>&nbsp;</p></div>
+    <div class="column grid_4"><h2>lines on paper</h2></div>
+	<div class="column grid_2"><p>&nbsp;</p></div>
+	<div class="column grid_4"><h3>lines of code</h3></div>
+	<div class="column grid_1"><p>&nbsp;</p></div>
+</div>
+<div class="row">
+	<div class="column grid_1"><p>&nbsp;</p></div>
+    <div class="column grid_4"><h4><a href="http://www.schatzkin.com/gallery2/main.php">photo journal</a></h4>
+    </div>
+	<div class="column grid_2"><p>&nbsp;</p></div>
+	<div class="column grid_4"><h5>web design</h5></div>
+	<div class="column grid_1"><p>&nbsp;</p></div>
+</div>
+<div class="row">
+	<div class="column grid_1"><p>&nbsp;</p></div>
+    <div class="column grid_4"><h4>other photography</h4></div>
+	<div class="column grid_2"><p>&nbsp;</p></div>
+	<div class="column grid_4"><h5>web development</h5></div>
+	<div class="column grid_1"><p>&nbsp;</p></div>
+</div>
+
+<div class="row">
+	<div class="column grid_1"><p>&nbsp;</p></div>
+    <div class="column grid_4"><h4>drawing/painting</h4></div>
+	<div class="column grid_2"><p>&nbsp;</p></div>
+	<div class="column grid_4"><h5>blog</h5></div>
+	<div class="column grid_1"><p>&nbsp;</p></div>
+</div>
+
+<div class="left"><img src="../schatzkin-theme/images/hand.png" width="265" height="253" alt="hand" /></div>
+	<div class="right"> <img src="../schatzkin-theme/images/can-opener.png" width="151" height="258" alt="can opener" /></div>
+<div id="left_image" class="left height_200" style="width:200px;">&nbsp;</div>
+
+
+<div class="row footer">
+	<div class="column grid_2"><img src="../schatzkin-theme/images/copyright.png" width="110" height="32" alt="copyright 2012" /></div>
+    <div class="column grid_10"></div> 
+<div>
+<!--<img src="../wp-creativix/images/can-opener.png" width="151" height="258" />
+--></body>
+<script type="text/javascript" src="js/jquery.js"></script>
+
+<script>
+$(function(){
+	var newbg = "";
+	var oldcolor = "yellow";
+	var bg_images = ['faucet.png', 'necklace-clasp.png', 'music-box.png', 'hanger-clip.png'];
+    var colors = ['green', 'purple', 'blue', 'red'];
+
+	for (var i=0, len=4;i<len;i++){
+		newcolor = colors[i];
+		alert(newcolor);
+		$('#left_image').delay(900).add('div').css('background-color', newcolor).fadeIn('slow');
+		oldcolor = newcolor;
+	}
+});
+</script>
+</html>

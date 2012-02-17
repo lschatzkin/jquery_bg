@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+<img id="eyeglass" src="../wp-creativix/images/eyeglass.png" alt="" width="346" height="251"/>
+<img id="can-opener" src="../wp-creativix/images/can-opener.png" alt="" width="151" height="258" />
+</body>
+<script type="text/javascript" src="js/jquery.js"></script>
+
+<script>
+$(function(){
+var the_path = 'wp-creativix/images/';
+var randomNum = (Math.ceil(Math.random()*6))-1; /* Pick random number between 0 and 5 */
+alert(randomNum);
+var sketches = ['eyeglass', 'can-opener','faucet', 'necklace-clasp', 'music-box', 'hanger-clip'];
+new_sketch = sketches[randomNum];
+alert(new_sketch);
+the_img = '<img id="' + new_sketch + '" src="' + the_path + new_sketch  + '.png" />';
+alert(the_img);
+the_id = "#"+new_sketch;
+alert(the_id);
+moveIt(the_id);
+setTimeout(function(){moveIt('#can-opener')}, 1000);
+
+function moveIt(the_div){
+	$(the_div).animate({
+    opacity: 0,
+  }, 2000, function() {
+    // Animation complete.
+  });
+  $(the_div).animate({
+    opacity: 1,
+  }, 2000, function() {
+    // Animation complete.
+  });
+};
+});
+</script>
+
+</html>
